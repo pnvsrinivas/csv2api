@@ -16,11 +16,11 @@ pip install -r requirements.txt
 python manage.py runserver
 
 # Documentation
-[http://csv2api.pythonanywhere.com/api/docs/](http://csv2api.pythonanywhere.com/api/docs/){:target="_blank"}
+[http://csv2api.pythonanywhere.com/api/docs/](http://csv2api.pythonanywhere.com/api/docs/)
 
 # Live demo
 ## Upload data
-[Upload](http://csv2api.pythonanywhere.com/api/upload/){:target="_blank"}
+[Upload](http://csv2api.pythonanywhere.com/api/upload/)
 
 ## Retrieve data
-[Retrieve](http://csv2api.pythonanywhere.com/api/data/<uuid>/?format=json){:target="_blank"}
+[Retrieve](http://csv2api.pythonanywhere.com/api/data/<uuid>/?format=json)
