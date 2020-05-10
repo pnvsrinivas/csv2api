@@ -18,9 +18,13 @@ class Dataset(models.Model):
 
     @property
     def is_expired(self):
-        return self.validity < timezone.now()
+        if self.created_by:
+            return False
+        return self.validity <= timezone.now()
     
     @property
     def validity(self):
+        if self.created_by:
+            return None
         return self.created_on + timedelta(days=1)
 

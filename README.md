@@ -19,8 +19,26 @@ python manage.py runserver
 [http://csv2api.pythonanywhere.com/api/docs/](http://csv2api.pythonanywhere.com/api/docs/)
 
 # Live demo
-## Upload data
-[Upload](http://csv2api.pythonanywhere.com/api/upload/)
+## Upload csv file
+[Upload](http://csv2api.pythonanywhere.com/api/file/upload/)
+
 
 ## Retrieve data
-[Retrieve](http://csv2api.pythonanywhere.com/api/data/<uuid>/?format=json)
+[Retrieve](http://csv2api.pythonanywhere.com/api/file/<uuid>/?format=json&page=1&size=5&sort_by=age,balance)
+
+### page
+Default page index is 1
+`&page=1`
+
+### size
+Default page size is 10
+`&size=5`
+
+#### Retrieve all rows
+`&size=all`
+
+### sort_by
+`&sort_by=column1`
+
+#### Multiple sort support
+`&sort_by=column1,column2`

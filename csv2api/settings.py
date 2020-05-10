@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'csv2api.core',
+    'csv2api.apis',
 ]
 
 MIDDLEWARE = [
