@@ -28,10 +28,12 @@ python manage.py runserver
 
 ### page
 Default page index is 1
+
 `&page=1`
 
 ### size
 Default page size is 10
+
 `&size=5`
 
 #### Retrieve all rows
@@ -40,5 +42,5 @@ Default page size is 10
 ### sort_by
 `&sort_by=column1`
 
-#### Multiple sort support
+#### Multiple column sort support
 `&sort_by=column1,column2`
