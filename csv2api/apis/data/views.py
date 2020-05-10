@@ -1,3 +1,4 @@
+import os
 import json
 import math
 import pandas as pd
@@ -89,7 +90,9 @@ class FileDataAPIView(APIView):
 
         sort_by = request.GET.get('sort_by')
 
-        if dataset.is_expired:
+        is_file_exists = os.path.exists(dataset.file.path)
+        if dataset.is_expired or not is_file_exists:
+            print("File not found: {}".format(dataset.file.url))
             return Response(
                 {
                     'message': 'This data is expired, only registered users data will be maintained!!'
