@@ -18,7 +18,7 @@ class DatasetSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Dataset
         fields = (
-            'url', 'filename', 
+            'id', 'url', 'filename', 
             'validity', 
         )
 
