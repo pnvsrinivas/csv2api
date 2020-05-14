@@ -16,6 +16,6 @@ if path not in sys.path:
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'csv2api.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'csv2api.settings.production')
 
 application = get_wsgi_application()

@@ -13,7 +13,7 @@ from rest_framework import status
 from rest_framework.permissions import AllowAny
 from django.contrib.auth.models import User
 from django.core.files.base import ContentFile
-from django.core.files.uploadedfile import InMemoryUploadedFile
+from django.core.files.uploadedfile import UploadedFile
 
 from csv2api.apis.data.serializers import (
     FileUploadSerializer, DatasetSerializer, FileUrlSerializer
@@ -47,7 +47,7 @@ class FileUploadView(APIView):
     def post(self, request, *args, **kwargs):
         file_name = None
 
-        if isinstance(request.data.get('file'), InMemoryUploadedFile):
+        if isinstance(request.data.get('file'), UploadedFile):
             serializer = FileUploadSerializer(data=request.data, context={ 'request': request })
         else:
             serializer = FileUrlSerializer(data=request.data, context={ 'request': request })
